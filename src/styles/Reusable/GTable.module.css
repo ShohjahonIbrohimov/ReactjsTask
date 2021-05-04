@@ -1,0 +1,13 @@
+.badge {
+  padding: 0.3rem 0.5rem;
+  border-radius: 30px;
+  color: white;
+}
+
+.active {
+  background: #52c41a;
+}
+
+.notActive {
+  background: #ff4d4f;
+}

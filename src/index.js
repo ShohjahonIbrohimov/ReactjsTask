@@ -1,23 +1,26 @@
-import React, { useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import React from "react";
 import ReactDOM from "react-dom";
-import MainPage from "./routes";
+import App from "./routes";
+import AxiosConfig from "./config/AxiosConfig";
+// STYLES
+import "antd/dist/antd.css";
+import "./styles/main.css";
 // REDUX
-import { Provider } from 'react-redux'
+import { store, persistor } from "./redux/store";
+import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import { persistor } from "./redux/store";
-import { store } from "./redux/store";
+// ROUT
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
-  <Provider store={store}>
-    <PersistGate loading={"Loading..."} persistor={persistor}>
-
-      <React.StrictMode>
-        <BrowserRouter>
-          <MainPage />
-        </BrowserRouter>
-      </React.StrictMode>
-    </PersistGate>
-  </Provider>,
+  <Router>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <AxiosConfig>
+          <App />
+        </AxiosConfig>
+      </PersistGate>
+    </Provider>
+  </Router>,
   document.getElementById("root")
 );

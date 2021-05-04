@@ -1,0 +1,146 @@
+.background {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.rect0,
+.rect1,
+.rect2,
+.rect3,
+.rect4,
+.rect5,
+.rect6 {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.363);
+  animation-name: wave;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.rect1 {
+  bottom: 0%;
+  left: 50%;
+  top: unset;
+  animation-delay: 0.5s;
+  animation-name: wave1;
+}
+
+.rect2 {
+  width: 50px;
+  height: 50px;
+  bottom: 10%;
+  left: 10%;
+  top: unset;
+  animation-delay: 1s;
+  animation-name: wave2;
+}
+
+.rect3 {
+  left: 30%;
+  top: 15%;
+  animation-delay: 1.5s;
+  animation-name: wave3;
+}
+
+.rect4 {
+  left: unset;
+  right: 10%;
+  top: unset;
+  bottom: 20%;
+}
+
+.rect5 {
+  left: unset;
+  right: 20%;
+  top: -10%;
+}
+
+.rect6 {
+  left: unset;
+  right: 5%;
+  top: 30%;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-30);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wave1 {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-30);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-30);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wave3 {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-30);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
