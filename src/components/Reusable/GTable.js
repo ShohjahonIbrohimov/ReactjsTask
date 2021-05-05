@@ -121,7 +121,6 @@ const UsersTable = ({
             title={c.title}
             dataIndex={c.dataIndex}
             key={c.key}
-            {...getColumnSearchProps(c.dataIndex)}
           />
         );
       })}
