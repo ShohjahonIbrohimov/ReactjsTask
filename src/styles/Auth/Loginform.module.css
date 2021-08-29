@@ -1,12 +1,21 @@
 .card {
-  width: 30%;
-  padding: 1.5rem;
+  width: 25%;
+  padding: 1.5rem 2rem;
   background-color: #fff;
   box-shadow: 0px 4px 57px -9px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   min-width: 320px;
   position: relative;
   z-index: 2;
+}
+
+.input_wrap {
+  margin-bottom: 1rem;
+}
+
+.required {
+  margin-top: 0.3rem;
+  color: red
 }
 
 .header {
@@ -26,7 +35,6 @@
   background-color: #f0f0f0;
   border: 2px solid #f0f0f0;
   outline: none;
-  margin-bottom: 1rem;
   border-radius: 5px;
   font-size: 1rem;
   transition: all 0.2s;
